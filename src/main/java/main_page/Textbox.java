@@ -3,6 +3,7 @@ package main_page;
 import org.checkerframework.checker.units.qual.A;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -80,6 +81,34 @@ public class Textbox {
 
 
         //Click and Confirm Label Position Changes
+        WebElement lable = driver.findElement(By.xpath("//input[@id='j_idt106:float-input']"));
+        lable.click();
+        String location = String.valueOf(lable.getLocation());
+        System.out.println(location);
+
+        //Type your name and choose the third option
+        WebElement name = driver.findElement(By.xpath("//*[@id='j_idt106:auto-complete']/ul/li/input"));
+        name.click();
+        name.sendKeys("Balaji");
+        //*[@id='j_idt106:auto-complete_panel']/descendant::li[3]
+        WebElement selectname = driver.findElement(By.xpath("//*[@id='j_idt106:auto-complete_panel']/ul/li[3]"));
+        selectname.click();
+
+        //Type your DOB (mm/dd/yyyy) and confirm date chosen
+        WebElement date = driver.findElement(By.xpath("//*[@id='j_idt106:j_idt116_input']"));
+        date.sendKeys("07/17/1999");
+        String month = String.valueOf(driver.findElement(By.xpath("//*[@class='ui-datepicker-title']/*[contains(text(),'July')]")).getText());
+        String year = String.valueOf(driver.findElement(By.xpath("//*[@class='ui-datepicker-title']/*[contains(text(),'1999')]")).getText());
+        String day= String.valueOf(driver.findElement(By.xpath("//*[@class='ui-datepicker-calendar']//child::tr[3]/td[7]/a[text()='17']")).getText());
+
+        String dob = month+"/"+day+"/"+year;
+        System.out.println(dob);
+        String dobcheck = "July/17/1999";
+        if (dobcheck.equals(dob)){
+            System.out.println("equal");
+        }else {
+            System.out.println("not");
+        }
 
 
 
