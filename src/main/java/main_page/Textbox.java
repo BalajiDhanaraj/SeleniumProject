@@ -74,6 +74,14 @@ public class Textbox {
         Actions press = new Actions(driver);
         press.keyDown(Keys.ENTER).build().perform();
 
+        WebElement errormsg = driver.findElement(By.xpath("//*[@id='j_idt106:thisform:j_idt110']//span[last()]"));
+        Boolean msg = errormsg.isDisplayed();
+        System.out.println(msg);
+
+
+        //Click and Confirm Label Position Changes
+
+
 
 
 
