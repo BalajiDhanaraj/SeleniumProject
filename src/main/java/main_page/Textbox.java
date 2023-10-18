@@ -110,8 +110,33 @@ public class Textbox {
             System.out.println("not");
         }
 
+        WebElement cal = driver.findElement(By.xpath("//*[@aria-label='Show Calendar']"));
+        cal.click();
+        //Type number and spin to confirm value changed
+        WebElement num = driver.findElement(By.name("j_idt106:j_idt118_input"));
+        //num.click();
+        num.sendKeys("55");
 
+        WebElement spinup = driver.findElement(By.xpath("//*[@name='j_idt106:j_idt118_input']//following::a[1]"));
+        spinup.click();
 
+        if(num.getText().equals(spinup.getText())){
+            System.out.println("true");
+        }else{
+            System.out.println("false v");
+        }
+
+        //Type random number (1-100) and confirm slider moves correctly
+        WebElement slide = driver.findElement(By.name("j_idt106:slider"));
+        slide.sendKeys("55");
+
+        WebElement slideno = driver.findElement(By.xpath("//*[@id='j_idt106:j_idt120']//div[contains(@style,text())]"));
+        //*[@id='j_idt106:j_idt120']//div[contains(@style,'55')]
+        if(slide.getText().equals(slideno.getText())){
+            System.out.println("same");
+        }else{
+            System.out.println("not same");
+        }
 
 
         //Thread.sleep(6000);
