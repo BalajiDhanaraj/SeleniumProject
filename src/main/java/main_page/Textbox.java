@@ -139,6 +139,31 @@ public class Textbox {
         }
 
 
+        //Click and Confirm Keyboard appears
+
+        WebElement click = driver.findElement(By.id("j_idt106:j_idt122"));
+        click.click();
+
+        WebElement key = driver.findElement(By.xpath("//*[@class='ui-widget ui-widget-content ui-corner-all ui-shadow keypad-popup ui-input-overlay']"));
+        Boolean trueornot = key.isDisplayed();
+
+        if(trueornot.equals(true)){
+            System.out.println("true");
+        }else {
+            System.out.println("false");
+        }
+
+        WebElement close = driver.findElement(By.xpath("//*[@title='Close the keypad']"));
+        close.click();
+
+        //Close the keypad
+        //Custom Toolbar
+
+        WebElement custom = driver.findElement(By.xpath("//*[@class='ql-editor ql-blank']/following::p"));
+        custom.sendKeys("The editors ");
+
+
+
         //Thread.sleep(6000);
        // driver.close();
 
