@@ -31,4 +31,6 @@ public class ButtonPom {
     @FindBy(xpath = "//*[@id='j_idt88:j_idt102:imageBtn']/span")
     public static WebElement Hidden;
 
+    @FindBy(xpath = "//*[@id='j_idt88:j_idt102:imageBtn']")
+    public static WebElement Hiddenbtn;
 }
