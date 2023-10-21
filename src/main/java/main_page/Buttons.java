@@ -68,8 +68,23 @@ public static void main(String[] args){
 //         System.out.println("change in color"+firstcolor+secondcolor);
 //     }
 
-        String colors = ButtonPom.ChangeColor.getCssValue("style");
-        System.out.println(colors);
+        WebElement changebtn = ButtonPom.ChangeColor;
+        Color firstcolors = Color.fromString(ButtonPom.ChangeColor.getCssValue("background-color"));
+        System.out.println(firstcolors);
+         Actions actions = new Actions(driver);
+         actions.moveToElement(changebtn);
+         actions.build().perform();
+
+        Color secondcolors = Color.fromString(ButtonPom.ChangeColor.getCssValue("background-color"));
+        System.out.println(secondcolors);
+
+        if (firstcolors.equals(secondcolors)){
+             System.out.println("no change in color"+firstcolors+secondcolors);
+         }else {
+             System.out.println("change in color"+firstcolors+secondcolors);
+         }
+
+
 
     //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
    // driver.close();
