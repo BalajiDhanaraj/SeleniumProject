@@ -53,21 +53,23 @@ public static void main(String[] args){
       System.out.println(sizes);
 
      //Mouse over and confirm the color changed
-     WebElement changebtn = ButtonPom.ChangeColor;
-     String firstcolor = String.valueOf(ButtonPom.ChangeColor.getCssValue("style"));
-    System.out.println("no change in color"+firstcolor);
-     Actions actions = new Actions(driver);
-     actions.moveToElement(changebtn);
-     actions.build().perform();
+//     WebElement changebtn = ButtonPom.ChangeColor;
+//     String firstcolor = String.valueOf(ButtonPom.ChangeColor.getCssValue("style"));
+//     System.out.println("no change in color"+firstcolor);
+//     Actions actions = new Actions(driver);
+//     actions.moveToElement(changebtn);
+//     actions.build().perform();
+//
+//     String secondcolor = String.valueOf(ButtonPom.ChangeColor.getCssValue("style"));
+//
+//     if (firstcolor.equals(secondcolor)){
+//         System.out.println("no change in color"+firstcolor+secondcolor);
+//     }else {
+//         System.out.println("change in color"+firstcolor+secondcolor);
+//     }
 
-     String secondcolor = String.valueOf(ButtonPom.ChangeColor.getCssValue("style"));
-
-     if (firstcolor.equals(secondcolor)){
-         System.out.println("no change in color"+firstcolor+secondcolor);
-     }else {
-         System.out.println("change in color"+firstcolor+secondcolor);
-     }
-
+        String colors = ButtonPom.ChangeColor.getCssValue("style");
+        System.out.println(colors);
 
     //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
    // driver.close();

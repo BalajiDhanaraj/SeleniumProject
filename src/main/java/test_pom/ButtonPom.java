@@ -25,7 +25,7 @@ public class ButtonPom {
     @FindBy(xpath = "//*[@id='j_idt88:j_idt98']/span[2]")
     public static WebElement Size;
 
-    @FindBy(xpath = "//*[@id='j_idt88:j_idt100']/span[@style]")
+    @FindBy(xpath = "//*[@id='j_idt88:j_idt100']/span")
     public static WebElement ChangeColor;
 
 }
