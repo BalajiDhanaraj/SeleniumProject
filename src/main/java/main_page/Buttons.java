@@ -53,20 +53,6 @@ public static void main(String[] args){
       System.out.println(sizes);
 
      //Mouse over and confirm the color changed
-//     WebElement changebtn = ButtonPom.ChangeColor;
-//     String firstcolor = String.valueOf(ButtonPom.ChangeColor.getCssValue("style"));
-//     System.out.println("no change in color"+firstcolor);
-//     Actions actions = new Actions(driver);
-//     actions.moveToElement(changebtn);
-//     actions.build().perform();
-//
-//     String secondcolor = String.valueOf(ButtonPom.ChangeColor.getCssValue("style"));
-//
-//     if (firstcolor.equals(secondcolor)){
-//         System.out.println("no change in color"+firstcolor+secondcolor);
-//     }else {
-//         System.out.println("change in color"+firstcolor+secondcolor);
-//     }
 
         WebElement changebtn = ButtonPom.ChangeColor;
         Color firstcolors = Color.fromString(ButtonPom.ChangeColor.getCssValue("background-color"));
@@ -84,6 +70,10 @@ public static void main(String[] args){
              System.out.println("change in color"+firstcolors+secondcolors);
          }
 
+        //Click Image Button and Click on any hidden button
+        ButtonPom.Hidden.click();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        ButtonPom.Hidden.click();
 
 
     //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
