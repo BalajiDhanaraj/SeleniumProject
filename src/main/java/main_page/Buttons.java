@@ -73,7 +73,7 @@ public static void main(String[] args){
         //Click Image Button and Click on any hidden button
         ButtonPom.Hidden.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        ButtonPom.Hidden.click();
+        ButtonPom.Hidden.click();f
 
 
     //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
