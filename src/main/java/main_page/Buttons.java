@@ -80,6 +80,7 @@ public static void main(String[] args) throws InterruptedException {
 
         //How many rounded buttons are there?
         List<WebElement> round = driver.findElements(By.xpath("//div[@class='card'][3]//button/span"));
+        ////div[@class='card'][3]//button//span[@class='ui-button-text ui-c'][last()]
         for (ListIterator<WebElement> it = round.listIterator(); it.hasNext(); ) {
             WebElement a = it.next();
             System.out.println(a);
