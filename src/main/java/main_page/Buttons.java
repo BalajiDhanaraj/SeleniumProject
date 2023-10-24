@@ -20,7 +20,7 @@ public class Buttons extends DriverSetup {
 
 
 
-public static void main(String[] args){
+public static void main(String[] args) throws InterruptedException {
 
     // reading the config file and invoke the driver chrome
     ReadProperties.ConfigFileReader();
@@ -70,10 +70,16 @@ public static void main(String[] args){
              System.out.println("change in color"+firstcolors+secondcolors);
          }
 
+
         //Click Image Button and Click on any hidden button
         ButtonPom.Hidden.click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        //Thread.sleep(100);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(500));
         ButtonPom.Hiddenbtn.click();
+
+        //How many rounded buttons are there?
+        WebElement round = ButtonPom.Roundbtn;
+
 
 
     //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
