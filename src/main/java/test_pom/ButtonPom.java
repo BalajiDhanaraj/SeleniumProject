@@ -34,6 +34,6 @@ public class ButtonPom {
     @FindBy(xpath = "//*[@id='j_idt88:j_idt102:imageBtn']")
     public static WebElement Hiddenbtn;
 
-    @FindBy(xpath = "//div[@class='card']//following-sibling::button[position()>0]")
+    @FindBy(xpath = "//div[@class='card'][3]//button/span")
     public static WebElement Roundbtn;
 }
