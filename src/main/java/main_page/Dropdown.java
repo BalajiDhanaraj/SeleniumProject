@@ -24,8 +24,21 @@ public class Buttons extends DriverSetup {
 
 public static void main(String[] args) throws InterruptedException {
 
+//Which is your favorite UI Automation tool?
 
+Select tools = new Select(driver.findElement(By.class("ui-selectonemenu")));
+tools.selectByVisibleText("Selenium");
 
+//Choose your preferred country.
+
+Select pref = new Select(driver.findElement(By.name("Select Country")));
+pref.selectByValue("India");
+
+//Confirm Cities belongs to Country is loaded
+
+Select city = new Select(driver.findElement(By.xpath("//*[@id='j_idt87:city_input']")));
+
+city.selectByValue("Select City");
 
 
 
