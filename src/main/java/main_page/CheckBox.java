@@ -47,7 +47,11 @@ toggle.click();
 //Verify if check box is disabled
 WebElement verify = driver.findElement(By.xpath("//*[@id='j_idt87:j_idt102_input']")));
 verify.isEnabled(); 
- 
+
+//Select Multiple
+WebElement multi = driver.findElement(By.xpath("//*[@class='ui-selectcheckboxmenu-items-wrapper']//li")));
+multi.click
+
  
 }
 }
