@@ -23,8 +23,22 @@ public class Buttons extends DriverSetup {
 
 public static void main(String[] args) throws InterruptedException {
 
+//Your most favorite browser
+WebElement fav = driver.findElement(By.xpath("//*[@id='j_idt87:console1:1']"));
+fav.click();
 
+//UnSelectable
+WebElement unselect = driver.findElement(By.xpath("//*[@id='j_idt87:console1:1']"));
+unselect.click();
   
+//Find the default select radio button
+WebElement def = driver.findElement(By.xpath("//*[@id='j_idt87:console2:2']"));
+def.click();
+
+//Select the age group (only if not selected)
+WebElement age = driver.findElement(By.xpath("//*[@id='j_idt87:age']//*[@class='ui-helper-hidden-accessible']//input[@type='radio']"));
+age.click();
+
 
 }
 }
