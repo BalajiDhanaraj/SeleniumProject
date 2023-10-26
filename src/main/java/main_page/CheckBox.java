@@ -18,7 +18,9 @@
   import static org.openqa.selenium.support.Color.fromString;
   
   
-  public class Buttons extends DriverSetup {
+  public class CheckBox extends DriverSetup {
+
+   public static void main(String[] args) throws InterruptedException {
   
   
   }
