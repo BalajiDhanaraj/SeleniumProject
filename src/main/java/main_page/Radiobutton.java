@@ -17,7 +17,7 @@ import java.util.ListIterator;
 import static org.openqa.selenium.support.Color.fromString;
 
 
-public class Buttons extends DriverSetup {
+public class Radiobutton extends DriverSetup {
 
 
 
