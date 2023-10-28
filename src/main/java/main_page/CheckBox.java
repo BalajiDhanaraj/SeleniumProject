@@ -26,31 +26,31 @@ public static void main(String[] args) throws InterruptedException {
 //Basic Checkbox
 
 WebElement basic = driver.findElement(By.xpath("//*[@id='j_idt87:j_idt89_input']"));
-basci.click();
+    basic.click();
 
 //Notification
-WebElement notify = driver.findElement(By.xpath("//*[@id='j_idt87:j_idt91_input']")));
+WebElement notify = driver.findElement(By.xpath("//*[@id='j_idt87:j_idt91_input']"));
 notify.click();
 
 //Choose your favorite language(s)
-WebElement lang = driver.findElement(By.xpath("//*[@id='j_idt87:basic']//tr//input")));
+WebElement lang = driver.findElement(By.xpath("//*[@id='j_idt87:basic']//tr//input"));
 lang.click();
 
 //Tri State Checkbox
-WebElement tri = driver.findElement(By.xpath("//*[@id='j_idt87:ajaxTriState']//input")));
+WebElement tri = driver.findElement(By.xpath("//*[@id='j_idt87:ajaxTriState']//input"));
 tri.click();
  
 //Toggle Switch
-WebElement toggle = driver.findElement(By.xpath("//*[@id='j_idt87:j_idt100_input']")));
+WebElement toggle = driver.findElement(By.xpath("//*[@id='j_idt87:j_idt100_input']"));
 toggle.click(); 
 
 //Verify if check box is disabled
-WebElement verify = driver.findElement(By.xpath("//*[@id='j_idt87:j_idt102_input']")));
+WebElement verify = driver.findElement(By.xpath("//*[@id='j_idt87:j_idt102_input']"));
 verify.isEnabled(); 
 
 //Select Multiple
-WebElement multi = driver.findElement(By.xpath("//*[@class='ui-selectcheckboxmenu-items-wrapper']//li")));
-multi.click
+WebElement multi = driver.findElement(By.xpath("//*[@class='ui-selectcheckboxmenu-items-wrapper']//li"));
+multi.click();
 
  
 }

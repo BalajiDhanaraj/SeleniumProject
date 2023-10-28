@@ -25,16 +25,16 @@ public class Hyperlinks extends DriverSetup {
 public static void main(String[] args) throws InterruptedException {
 
 //Take me to dashboard
-WebElement dash = driver.findElement(By.linkTexts("Go to Dashboard"));
-fav.click();
+WebElement dash = driver.findElement(By.linkText("Go to Dashboard"));
+dash.click();
 
 //Find my destination
-WebElement fav = driver.findElement(By.linkTexts("Find the URL without clicking me."));
+WebElement fav = driver.findElement(By.linkText("Find the URL without clicking me."));
 fav.click();
 
 
 //Am I broken link?
-WebElement broken = driver.findElement(By.linkTexts("Broken?"));
+WebElement broken = driver.findElement(By.linkText("Broken?"));
 broken.click();
 
 //Duplicate Link

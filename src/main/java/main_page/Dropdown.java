@@ -7,6 +7,7 @@
   import org.openqa.selenium.interactions.Actions;
   import org.openqa.selenium.support.Color;
   import org.openqa.selenium.support.PageFactory;
+  import org.openqa.selenium.support.ui.Select;
   import test_pom.ButtonPom;
   import utils.DriverSetup;
   import utils.ReadProperties;
@@ -25,7 +26,7 @@
   public static void main(String[] args) throws InterruptedException {
   
   //Which is your favorite UI Automation tool?
-  Select tools = new Select(driver.findElement(By.class("ui-selectonemenu")));
+  Select tools = new Select(driver.findElement(By.className("ui-selectonemenu")));
   tools.selectByVisibleText("Selenium");
   
   //Choose your preferred country.
@@ -42,37 +43,12 @@
   
   //Choose language randomly
   Select rand = new Select(driver.findElement(By.xpath("//*[@id='j_idt87:lang_input']/*")));
-  rand.SelectByIndex(2);
+  rand.selectByIndex(2);
   
   //Select 'Two' irrespective of the language chosen
 
     
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   
   }
   
