@@ -39,29 +39,34 @@
 //  Thread.sleep(5000);
 
   //Choose your preferred country.
-//   WebElement coun = driver.findElement(By.xpath("//*[@id='j_idt87:country']//following-sibling::div/*[@id='j_idt87:country_input']"));
-//   coun.click();
-//
-//    WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(40));
-//
-//   Select pref = new Select(wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//*[@id='j_idt87:country']//following-sibling::div/*[@id='j_idt87:country_input']")))));
-//   pref.selectByValue("India");
-  Select pref = new Select(driver.findElement(By.xpath("//*[@class='ui-helper-hidden-accessible']//*[@id='j_idt87:country_input']")));
-  pref.selectByValue("India");
+  WebElement pref = driver.findElement(By.xpath("//*[@id='j_idt87:country']//following-sibling::div//span"));
+  pref.click();
+  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+  List<WebElement> prefsel = driver.findElements(By.xpath("//*[@id='j_idt87:country_items']/li[@data-label]"));
+  System.out.println(prefsel);
+  for (WebElement sels:prefsel){
+    if (sels.getText().equals("India")){
+      System.out.println(sels.getText());
+      sels.click();
+      break;
+    }
+  }
+
+
 
 //  //Confirm Cities belongs to Country is loaded
 //  Select city = new Select(driver.findElement(By.xpath("//*[@id='j_idt87:city_input']")));
 //  city.selectByValue("Select City");
   
   //Choose the Course
-  WebElement course = driver.findElement(By.xpath("//button[@aria-label='Show Options']"));
-  course.click();
-  WebElement sel = driver.findElement(By.xpath("//*[@id='j_idt87:auto-complete_panel']//ul//li[2]"));
-  sel.click();
-
-  //Choose language randomly
-    WebElement rand = driver.findElement(By.xpath("//*[@id='j_idt87:lang']//following-sibling::div/*[@id='j_idt87:lang_input']/option[2]"));
-    rand.click();
+//  WebElement course = driver.findElement(By.xpath("//button[@aria-label='Show Options']"));
+//  course.click();
+//  WebElement sel = driver.findElement(By.xpath("//*[@id='j_idt87:auto-complete_panel']//ul//li[2]"));
+//  sel.click();
+//
+//  //Choose language randomly
+//    WebElement rand = driver.findElement(By.xpath("//*[@id='j_idt87:lang']//following-sibling::div/*[@id='j_idt87:lang_input']/option[2]"));
+//    rand.click();
 //  Select rand = new Select(driver.findElement(By.id("j_idt87:lang_input")));
 //  rand.selectByIndex(2);
 //  rand.selectByIndex(3);

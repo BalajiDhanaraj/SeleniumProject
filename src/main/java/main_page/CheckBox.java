@@ -24,7 +24,7 @@ public static void main(String[] args) throws InterruptedException {
     ReadProperties.ConfigFileReader();
 //Basic Checkbox
 
-WebElement basic = driver.findElement(By.xpath("//*[@id='j_idt87:j_idt89_input']"));
+WebElement basic = driver.findElement(By.xpath("//*[@id='j_idt87:j_idt89']//following-sibling::div"));
     basic.click();
 
 //Notification
