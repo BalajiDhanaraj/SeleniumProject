@@ -24,6 +24,8 @@ public class Hyperlinks extends DriverSetup {
 
 public static void main(String[] args) throws InterruptedException {
 
+    ReadProperties.ConfigFileReader();
+
 //Take me to dashboard
 WebElement dash = driver.findElement(By.linkText("Go to Dashboard"));
 dash.click();

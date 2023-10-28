@@ -23,6 +23,8 @@ public class Radiobutton extends DriverSetup {
 
 public static void main(String[] args) throws InterruptedException {
 
+    ReadProperties.ConfigFileReader();
+
 //Your most favorite browser
 WebElement fav = driver.findElement(By.xpath("//*[@id='j_idt87:console1:1']"));
 fav.click();
