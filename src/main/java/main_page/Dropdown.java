@@ -38,7 +38,7 @@
 
 //  Thread.sleep(5000);
 
-  //Choose your preferred country.
+//  //Choose your preferred country.
   WebElement pref = driver.findElement(By.xpath("//*[@id='j_idt87:country']//following-sibling::div//span"));
   pref.click();
   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
@@ -52,29 +52,63 @@
     }
   }
 
+  Thread.sleep(1000);
+
+  //Confirm Cities belongs to Country is loaded
+  WebElement select_city = driver.findElement(By.xpath("//*[@id='j_idt87:city_label']//following-sibling::div//span"));
+    select_city.click();
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+    List<WebElement> cities = driver.findElements(By.xpath("//div[@class='ui-selectonemenu-items-wrapper']/ul[@id='j_idt87:city_items']/li"));
+    for(WebElement selcity:cities){
+      if (selcity.getText().equals("Chennai")){
+        selcity.click();
+        break;
+      }
+    }
 
 
-//  //Confirm Cities belongs to Country is loaded
-//  Select city = new Select(driver.findElement(By.xpath("//*[@id='j_idt87:city_input']")));
-//  city.selectByValue("Select City");
-  
+
+
+
+
   //Choose the Course
-//  WebElement course = driver.findElement(By.xpath("//button[@aria-label='Show Options']"));
-//  course.click();
-//  WebElement sel = driver.findElement(By.xpath("//*[@id='j_idt87:auto-complete_panel']//ul//li[2]"));
-//  sel.click();
-//
-//  //Choose language randomly
-//    WebElement rand = driver.findElement(By.xpath("//*[@id='j_idt87:lang']//following-sibling::div/*[@id='j_idt87:lang_input']/option[2]"));
-//    rand.click();
-//  Select rand = new Select(driver.findElement(By.id("j_idt87:lang_input")));
-//  rand.selectByIndex(2);
-//  rand.selectByIndex(3);
+  WebElement coursebtn = driver.findElement(By.xpath("//*[@aria-label='Show Options']/span[1]"));
+  coursebtn.click();
+  List<WebElement> listcourse= driver.findElements(By.xpath("//*[@id='j_idt87:auto-complete_panel']/ul/li"));
+  for (WebElement lists:listcourse){
+    if (lists.getText().equals("AWS"));
+        lists.click();
+        break;
+  }
 
+
+
+
+//  //Choose language randomly
+    WebElement rand = driver.findElement(By.xpath("//*[@id='j_idt87:lang']/div[3]/span"));
+    rand.click();
+    List<WebElement> lang = driver.findElements(By.xpath("//*[@id='j_idt87:lang_items']/li"));
+    for (WebElement langlist:lang){
+      if (langlist.getText().contains("Tamil")){
+        langlist.click();
+        break;
+      }
+    }
+
+    Thread.sleep(1000);
   
   //Select 'Two' irrespective of the language chosen
 
-    
+    WebElement clickbtn = driver.findElement(By.xpath("//*[@id='j_idt87:value']/div[3]"));
+    clickbtn.click();
+
+    List<WebElement> two = driver.findElements(By.xpath("//*[@id='j_idt87:value_items']/li"));
+    for (WebElement twointamil : two){
+      if (twointamil.getText().contains("இரண்டு")){
+        twointamil.click();
+        break;
+      }
+    }
 
   
   }
