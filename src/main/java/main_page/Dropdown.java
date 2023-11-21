@@ -26,8 +26,6 @@
   
   public class Dropdown extends DriverSetup {
   
-  
-  
   public static void main(String[] args) throws InterruptedException {
 
     ReadProperties.ConfigFileReader();
@@ -66,11 +64,6 @@
       }
     }
 
-
-
-
-
-
   //Choose the Course
   WebElement coursebtn = driver.findElement(By.xpath("//*[@aria-label='Show Options']/span[1]"));
   coursebtn.click();
@@ -80,8 +73,6 @@
         lists.click();
         break;
   }
-
-
 
 
 //  //Choose language randomly
@@ -110,7 +101,5 @@
       }
     }
 
-  
   }
-  
   }
