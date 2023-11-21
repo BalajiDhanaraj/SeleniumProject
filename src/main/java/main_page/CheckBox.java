@@ -35,21 +35,21 @@ notify.click();
 WebElement lang = driver.findElement(By.xpath("//*[@id='j_idt87:basic']//tr//input"));
 lang.click();
 
-//Tri State Checkbox
-WebElement tri = driver.findElement(By.xpath("//*[@id='j_idt87:ajaxTriState']//input"));
-tri.click();
- 
-//Toggle Switch
-WebElement toggle = driver.findElement(By.xpath("//*[@id='j_idt87:j_idt100_input']"));
-toggle.click(); 
-
-//Verify if check box is disabled
-WebElement verify = driver.findElement(By.xpath("//*[@id='j_idt87:j_idt102_input']"));
-verify.isEnabled(); 
-
-//Select Multiple
-WebElement multi = driver.findElement(By.xpath("//*[@class='ui-selectcheckboxmenu-items-wrapper']//li"));
-multi.click();
+////Tri State Checkbox
+//WebElement tri = driver.findElement(By.xpath("//*[@id='j_idt87:ajaxTriState']//input"));
+//tri.click();
+//
+////Toggle Switch
+//WebElement toggle = driver.findElement(By.xpath("//*[@id='j_idt87:j_idt100_input']"));
+//toggle.click();
+//
+////Verify if check box is disabled
+//WebElement verify = driver.findElement(By.xpath("//*[@id='j_idt87:j_idt102_input']"));
+//verify.isEnabled();
+//
+////Select Multiple
+//WebElement multi = driver.findElement(By.xpath("//*[@class='ui-selectcheckboxmenu-items-wrapper']//li"));
+//multi.click();
 
  
 }
