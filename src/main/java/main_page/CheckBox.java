@@ -2,22 +2,11 @@
 package main_page;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.devtools.v85.browser.model.WindowID;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.Color;
-import org.openqa.selenium.support.PageFactory;
-import test_pom.ButtonPom;
 import utils.DriverSetup;
 import utils.ReadProperties;
 
-import java.time.Duration;
-import java.util.Iterator;
 import java.util.List;
-import java.util.ListIterator;
-
-import static org.openqa.selenium.support.Color.fromString;
 
 
 public class CheckBox extends DriverSetup {
@@ -71,10 +60,8 @@ for (int i=0 ; i<ls_coun.size();i++){
     if (i<2){
         WebElement ls = ls_coun.get(i);
         ls.click();
-
     }
 }
-
 
 }
 }
